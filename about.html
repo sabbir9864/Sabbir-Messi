@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Me | M. Sabbir Official</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#08090d;
+    color:white;
+}
+
+header{
+    padding:20px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #222;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    color:white;
+    text-decoration:none;
+}
+
+nav{
+    display:flex;
+    gap:22px;
+    flex-wrap:wrap;
+}
+
+nav a{
+    color:#aaa;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:white;
+}
+
+main{
+    min-height:80vh;
+    padding:90px 7%;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.title h1{
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.title p{
+    color:#aaa;
+    font-size:17px;
+}
+
+.about-container{
+    max-width:950px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    gap:30px;
+}
+
+.profile{
+    background:#101218;
+    border:1px solid #242630;
+    border-radius:18px;
+    padding:35px;
+    text-align:center;
+}
+
+.profile-picture{
+    width:170px;
+    height:170px;
+    margin:0 auto 25px;
+    border-radius:50%;
+    background:#181a20;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#666;
+    border:2px solid #292c35;
+}
+
+.profile h2{
+    margin-bottom:10px;
+}
+
+.profile p{
+    color:#999;
+}
+
+.info{
+    background:#101218;
+    border:1px solid #242630;
+    border-radius:18px;
+    padding:35px;
+}
+
+.info h2{
+    margin-bottom:20px;
+}
+
+.info p{
+    color:#aaa;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.info-box{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.item{
+    padding:18px;
+    background:#15171e;
+    border-radius:10px;
+    border:1px solid #22252d;
+}
+
+.item strong{
+    display:block;
+    margin-bottom:7px;
+}
+
+.item span{
+    color:#999;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#666;
+    border-top:1px solid #222;
+}
+
+@media(max-width:750px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .about-container{
+        grid-template-columns:1fr;
+    }
+
+    .title h1{
+        font-size:38px;
+    }
+}
+
+@media(max-width:500px){
+
+    .info-box{
+        grid-template-columns:1fr;
+    }
+
+    nav{
+        justify-content:center;
+        gap:12px;
+    }
+
+    nav a{
+        font-size:12px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <a href="index.html" class="logo">
+        M. SABBIR OFFICIAL
+    </a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="gaming.html">Gaming</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="index.html#social">Social Media</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+</header>
+
+<main>
+
+    <div class="title">
+        <h1>About Me</h1>
+        <p>Get to know a little more about me.</p>
+    </div>
+
+
+    <div class="about-container">
+
+        <div class="profile">
+
+            <div class="profile-picture">
+                YOUR PHOTO
+            </div>
+
+            <h2>M. Sabbir Ahmed</h2>
+
+            <p>
+                Football Lover • Gamer • Creator
+            </p>
+
+        </div>
+
+
+        <div class="info">
+
+            <h2>Hello! 👋</h2>
+
+            <p>
+                I'm Sabbir. Welcome to my official website.
+                This is my personal space where I share my interests,
+                gaming journey, favorite moments and more.
+            </p>
+
+            <p>
+                I am passionate about football, gaming,
+                technology and creativity. Lionel Messi is
+                one of my biggest inspirations. 🐐
+            </p>
+
+
+            <div class="info-box">
+
+                <div class="item">
+                    <strong>⚽ Favorite Sport</strong>
+                    <span>Football</span>
+                </div>
+
+                <div class="item">
+                    <strong>🎮 Favorite Game</strong>
+                    <span>eFootball</span>
+                </div>
+
+                <div class="item">
+                    <strong>🐐 Favorite Player</strong>
+                    <span>Lionel Messi</span>
+                </div>
+
+                <div class="item">
+                    <strong>🌐 Website</strong>
+                    <span>M. Sabbir Official</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+<footer>
+
+    © 2026 M. SABBIR OFFICIAL. All Rights Reserved.
+
+</footer>
+
+</body>
+</html>

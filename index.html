@@ -1,0 +1,451 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>M. SABBIR OFFICIAL</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #08090d;
+            color: white;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(8, 9, 13, 0.75);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 23px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            gap: 22px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #aaa;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        /* HOME */
+
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 120px 20px 70px;
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    rgba(5, 7, 12, 0.45),
+                    rgba(5, 7, 12, 0.82)
+                ),
+                url("images/messi-background.jpg");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: white;
+            opacity: 0.025;
+            filter: blur(80px);
+            animation: glow 6s ease-in-out infinite;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            letter-spacing: 4px;
+            margin-bottom: 18px;
+            text-shadow: 0 5px 30px rgba(0,0,0,0.9);
+        }
+
+        .hero h2 {
+            font-size: 25px;
+            color: #ddd;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            color: #bbb;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .hero h3 {
+            color: #eee;
+            font-size: 19px;
+            font-weight: normal;
+            margin-bottom: 32px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 34px;
+            background: white;
+            color: black;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 35px rgba(255,255,255,0.18);
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.02;
+            }
+
+            50% {
+                transform: scale(1.25);
+                opacity: 0.05;
+            }
+        }
+
+        /* SECTIONS */
+
+        section:not(.hero) {
+            padding: 100px 8%;
+            text-align: center;
+            border-bottom: 1px solid #181a20;
+        }
+
+        section:not(.hero) h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        section:not(.hero) > p {
+            max-width: 700px;
+            margin: auto;
+            color: #aaa;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        /* GAMING */
+
+        .cards {
+            max-width: 1000px;
+            margin: 50px auto 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            padding: 35px 25px;
+            background: #101218;
+            border: 1px solid #242630;
+            border-radius: 16px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: #555;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            font-size: 21px;
+        }
+
+        .card p {
+            color: #999;
+            line-height: 1.6;
+        }
+
+        /* SOCIAL */
+
+        .social-links {
+            margin-top: 35px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            padding: 13px 22px;
+            border: 1px solid #292b34;
+            border-radius: 8px;
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            background: white;
+            color: black;
+        }
+
+        /* CONTACT */
+
+        .contact-box {
+            max-width: 600px;
+            margin: 40px auto 0;
+            padding: 35px;
+            background: #101218;
+            border: 1px solid #242630;
+            border-radius: 16px;
+        }
+
+        .contact-box a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 30px 15px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 900px) {
+
+            header {
+                padding: 18px 5%;
+            }
+
+            nav {
+                gap: 12px;
+            }
+
+            .hero h1 {
+                font-size: 50px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+                max-width: 600px;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                position: absolute;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .logo {
+                font-size: 19px;
+            }
+
+            nav {
+                justify-content: center;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            .hero {
+                padding-top: 150px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+                letter-spacing: 2px;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .hero h3 {
+                font-size: 16px;
+            }
+
+            section:not(.hero) {
+                padding: 75px 6%;
+            }
+
+            section:not(.hero) h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        M. SABBIR OFFICIAL
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="gaming.html">Gaming</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="index.html#social">Social Media</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+</header>
+
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>MESSI SABBIR OFFICIAL</h1>
+
+        <h2>Welcome to my official website</h2>
+
+        <h3>
+            Lionel Messi is not just a player, he's an emotion. 🐐
+        </h3>
+
+        <a href="#about" class="btn">
+    Explore
+</a>
+
+    </div>
+
+</section>
+
+<<section id="about">
+    <h2>Hello Guys 👋</h2>
+    <p>This is my official website.</p>
+</section>
+
+
+!-- SOCIAL MEDIA -->
+
+<!-- SOCIAL MEDIA -->
+
+<section id="social">
+
+    <h2>Social Media</h2>
+
+    <p>
+        Follow me and stay connected with M. Sabbir Official.
+    </p>
+
+    <div class="social-links">
+
+        <a href="https://www.facebook.com/share/19YS2q21cr/" target="_blank">
+            🔵 Facebook
+        </a>
+
+        <a href="https://www.instagram.com/msabbirahmed9864?igsi=Z2YxZDJpMmRtaHUw" target="_blank">
+            📸 Instagram
+        </a>
+
+        <a href="https://youtube.com/@m.sabbirahmedtechnology?si=Ve60rNX26fA46oCy" target="_blank">
+            ▶️ YouTube
+        </a>
+
+        <a href="https://www.tiktok.com/@leomessi9864?_r=1&_t=ZS-99LqSSAkPzd" target="_blank">
+            🎵 TikTok
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+    <h2>Contact</h2>
+
+    <p>
+        Want to get in touch with me?
+    </p>
+
+    <div class="contact-box">
+
+        <p>
+            Email:
+            <a href="mailto:messisabbirofficial@gmail.com">
+                messisabbirofficial@gmail.com
+            </a>
+        </p>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    © 2026 M. SABBIR OFFICIAL. All Rights Reserved.
+
+</footer>
+
+</body>
+</html>
+```
